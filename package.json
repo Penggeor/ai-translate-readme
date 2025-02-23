@@ -1,0 +1,106 @@
+{
+  "name": "ai-translate-readme",
+  "publisher": "Pandy",
+  "displayName": "AI Translate README",
+  "description": "Translate README.md to different languages using AI",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.69.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "ai-translate-readme.translate",
+        "title": "AI Translate README"
+      }
+    ],
+    "configuration": {
+      "title": "AI Translate README",
+      "properties": {
+        "aiTranslateReadme.deepseekApiKey": {
+          "type": "string",
+          "default": "",
+          "description": "API Key for Deepseek AI"
+        },
+        "aiTranslateReadme.targetLanguage": {
+          "type": "string",
+          "enum": [
+            "zh-CN",
+            "zh-TW",
+            "ja",
+            "ko",
+            "fr",
+            "de",
+            "es",
+            "it",
+            "pt",
+            "ru",
+            "ar",
+            "hi",
+            "vi"
+          ],
+          "enumDescriptions": [
+            "简体中文",
+            "繁體中文",
+            "日本語",
+            "한국어",
+            "Français",
+            "Deutsch",
+            "Español",
+            "Italiano",
+            "Português",
+            "Русский",
+            "العربية",
+            "हिन्दी",
+            "Tiếng Việt"
+          ],
+          "default": "zh-CN",
+          "description": "Select the target language for translation"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+    "compile": "webpack",
+    "watch": "webpack --watch",
+    "package": "webpack --mode production --devtool hidden-source-map",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "npm run compile-tests && npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/glob": "^7.2.0",
+    "@types/mocha": "^9.1.1",
+    "@types/node": "16.x",
+    "@types/vscode": "^1.69.0",
+    "@typescript-eslint/eslint-plugin": "^5.30.0",
+    "@typescript-eslint/parser": "^5.30.0",
+    "@vscode/test-electron": "^2.1.5",
+    "eslint": "^8.18.0",
+    "glob": "^8.0.3",
+    "mocha": "^10.0.0",
+    "ts-loader": "^9.3.1",
+    "typescript": "^4.7.4",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.10.0"
+  },
+  "dependencies": {
+    "@langchain/core": "^0.3.40",
+    "@langchain/deepseek": "^0.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/penggeor/ai-translate-readme.git"
+  },
+  "icon": "public/img/logo.png"
+}
