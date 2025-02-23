@@ -40,7 +40,7 @@ export function activate(context: vscode.ExtensionContext) {
         // Initialize DeepSeek model
         const model = new ChatDeepSeek({
           apiKey: apiKey,
-          model: "DeepSeek-V3",
+          model: "deepseek-chat",
         });
 
         // Prepare the translation prompt

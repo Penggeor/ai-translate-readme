@@ -14,3 +14,7 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 - Basic README translation functionality
 - Support for multiple target languages
 - Integration with Deepseek AI for translations
+
+## [0.0.2] - Updated icon path
+- Updated icon path from `public/img/icon.png` to `public/img/logo.png`
+- Updated model to `deepseek-chat`

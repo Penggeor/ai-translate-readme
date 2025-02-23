@@ -3,7 +3,7 @@
   "publisher": "Pandy",
   "displayName": "AI Translate README",
   "description": "Translate README.md to different languages using AI",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.69.0"
   },
