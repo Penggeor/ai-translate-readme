@@ -1,3 +1,5 @@
+<h4 align="right"><strong>English</strong> | <a href="https://github.com/Penggeor/ai-translate-readme/blob/main/README_zh-CN.md">简体中文</a>
+
 # AI Translate README
 
 Translate your README.md files into different languages using AI - right in VS Code!
@@ -13,10 +15,18 @@ Translate your README.md files into different languages using AI - right in VS C
 
 1. Install from VS Code Marketplace
 2. Add your Deepseek AI API key in settings
+
+![image](./public/img/1.jpg)
+
 3. Open command palette (`Cmd/Ctrl + Shift + P`)
+
 4. Run "AI Translate README"
 
+![image](./public/img/2.jpg)
+
 That's it! A new translated file will be created as `README_[language-code].md`
+
+![image](./public/img/3.jpg)
 
 ## Settings
 
